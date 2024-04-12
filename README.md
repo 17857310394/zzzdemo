@@ -1,7 +1,10 @@
-# ZZZDemo源码
+# ZZZDemo介绍（必看）
 
-#### 介绍
+#### 特别声明
 仅供开发者学习使用，请勿随意外传，禁止商业用途，包含相关官方美术素材，侵权联系作者删除。
+
+#### 使用说明
+下载Zip，解压，直接用UnityHub打开根文件夹，打开项目后进入NO1场景
 
 #### Demo架构
 第三人称控制采用CharacterController下的Move方法实现移动，使用OnAnimaionMove动画更新频率刷新的根运动实现的移动。
@@ -17,9 +20,6 @@ GameEventManager工具类事件工具提供事件注册（用string类型映射�
 SFX_PoolManger工具类提供一个用SoundStyle枚举类型映射音效预制体激活的API、一个用SoundStyle枚举类型和String映射音效预制体激活的API，所有音效预制体的生成的配置完全自动化，基于可在编辑器状态下执行的CreateSoundPoolItem和CreateComboPoolTool的editor文件。
 所有PoolManger基于对象池设计模式。
 CameraHitFeel工具类控制角色慢动作、顿帧。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API...
-
-#### 使用说明
-下载Zip，解压，直接用UnityHub打开根文件夹，打开项目后进入NO1场景
 
 #### 参考资料
 
