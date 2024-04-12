@@ -23,6 +23,7 @@ SFX_PoolManger工具类提供一个用SoundStyle枚举类型映射音效预制�
 VFXManager工具类控制全场特效的播放速度，提供控制场景特效播放速度的API。
 CameraHitFeel工具类控制角色慢动作、顿帧、震屏。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API。
 SwitchCharacter工具实现人物切换、人物切换动画、相机目标点变更等逻辑，提供人物切换，人物连携的API。
+GameBlackboard工具类实现每个角色之间的数据共享、和敌人的同步。提供GetGameData<T>(string)的API、GetEnemies（）的API。
 
 #### 参考资料
 
