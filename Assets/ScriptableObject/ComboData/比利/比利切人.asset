@@ -29,7 +29,6 @@ MonoBehaviour:
   _weaponSound: []
   _characterVoice:
   - {fileID: 8300000, guid: ef6dce3e12707fe47b88af66019d4ecc, type: 3}
-  - {fileID: 8300000, guid: e314234468bd27a41b00ed9eafaf2d24, type: 3}
   - {fileID: 8300000, guid: f3291a137e2d1114bbd12d493013c0de, type: 3}
   _universalSound: 0
   _ATKCount: 15

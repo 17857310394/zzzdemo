@@ -71,6 +71,9 @@ public class TimerManager : Singleton<TimerManager>
     /// <param name="gameTimer"></param>
     public void UnregisterTimer(GameTimer gameTimer)
     {
+        if (gameTimer == null) { return; }
+        //非工作计时器不能被销毁，因为可能会注册其他事件
+        if (gameTimer.TimerStation != TimerStation.DoWorking) { return; }
         gameTimer.InitTimer();
         isWorkingTimers.Remove(gameTimer);
         notWorkTimers.Enqueue(gameTimer);

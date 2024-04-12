@@ -120,7 +120,7 @@ namespace ZZZ
         }
         private void OnDashStart(InputAction.CallbackContext context)
         {
-            
+            if (movementStateMachine.player.comboStateMachine.currentState.Value == movementStateMachine.player.comboStateMachine.SkillState) { return; }
             if (reusableDate.canDash)
             {
                 Debug.Log("½øÈëÉÁ±Ü×´Ì¬");

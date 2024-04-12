@@ -2,11 +2,13 @@
 using ZZZ;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using GGG.Tool;
 
 namespace TPF
 {
     public class PlayerIdlingState : PlayerMovementState
     {
+        GameTimer GameTimer { get; set; }
         //调用父类的构造函数
         public PlayerIdlingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
@@ -42,15 +44,17 @@ namespace TPF
         {
             base.RemoveInputActionCallBacks();
             CharacterInputSystem.MainInstance.inputActions.Player.Movement.started -= bufferToRun;
+            TimerManager.MainInstance.UnregisterTimer(GameTimer);
         }
 
         private void bufferToRun(InputAction.CallbackContext context)
         {          
-           TimerManager.MainInstance.GetOneTimer(0.11f,CheckMoveInput);
+          GameTimer=TimerManager.MainInstance.GetTimer(0.11f,CheckMoveInput);
         }
 
         private void CheckMoveInput()
         {
+           
             //视为轻击角色没有Walk或者Run而是Run_Start_End
             if (CharacterInputSystem.MainInstance.PlayerMove == Vector2.zero)
             {
