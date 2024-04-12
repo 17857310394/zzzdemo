@@ -16,8 +16,7 @@ TimerManager工具类计时器工具提供基于ScaleTime倒计时触发的委�
 GameEventManager工具类事件工具提供事件注册（用string类型映射一个传入T或多个T参数委托事件）、事件触发、事件销毁的API。
 SFX_PoolManger工具类提供一个用SoundStyle枚举类型映射音效预制体激活的API、一个用SoundStyle枚举类型和String映射音效预制体激活的API，所有音效预制体的生成的配置完全自动化，基于可在编辑器状态下执行的CreateSoundPoolItem和CreateComboPoolTool的editor文件。
 所有PoolManger基于对象池设计模式。
-CameraHitFeel工具类控制角色慢动作、顿帧。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API。
-...
+CameraHitFeel工具类控制角色慢动作、顿帧。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API...
 
 #### 使用说明
 下载Zip，解压，直接用UnityHub打开根文件夹，打开项目后进入NO1场景
