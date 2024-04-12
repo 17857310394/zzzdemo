@@ -1,7 +1,10 @@
-# ZZZDemo源码
+# ZZZDemo介绍（必看）
 
-#### 介绍
+#### 特别声明
 仅供开发者学习使用，请勿随意外传，禁止商业用途，包含相关官方美术素材，侵权联系作者删除。
+
+#### 使用说明
+下载ZIP（文件大约200MB），解压文件若出现损坏，请关闭第三方下载工具或者添加，使用浏览器下载。解压之后直接用UnityHub打开根文件夹，打开项目后进入NO1场景
 
 #### Demo架构
 第三人称控制采用CharacterController下的Move方法实现移动，使用OnAnimaionMove动画更新频率刷新的根运动实现的移动。
@@ -10,17 +13,16 @@
 CharacterHealth注册伤害事件、处理对应攻击者的伤害、受伤动画、格挡动画以及生成受击音效、受击特效
 第三人称镜头和技能镜头基于Cinemachine的 State-Driven Camera、Dolly轨道相机、Timeline动态更新Dolly数据。移动状态的水平居中通过Cinamachine计算实现
 
+
 ScriptableObject实现人物所有不变数据的储存、ReusableData实现人物变更数据的储存和变更。
 BindableProperty实现变更数据的事件绑定。
 TimerManager工具类计时器工具提供基于ScaleTime倒计时触发的委托函数、基于UnScaleTime倒计时触发的委托函数、以及可以销毁正在计时委托的API。
 GameEventManager工具类事件工具提供事件注册（用string类型映射一个传入T或多个T参数委托事件）、事件触发、事件销毁的API。
 SFX_PoolManger工具类提供一个用SoundStyle枚举类型映射音效预制体激活的API、一个用SoundStyle枚举类型和String映射音效预制体激活的API，所有音效预制体的生成的配置完全自动化，基于可在编辑器状态下执行的CreateSoundPoolItem和CreateComboPoolTool的editor文件。
 所有PoolManger基于对象池设计模式。
-CameraHitFeel工具类控制角色慢动作、顿帧。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API。
-...
-
-#### 使用说明
-下载Zip，解压，直接用UnityHub打开根文件夹，打开项目后进入NO1场景
+VFXManager工具类控制全场特效的播放速度，提供控制场景特效播放速度的API。
+CameraHitFeel工具类控制角色慢动作、顿帧、震屏。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API。
+SwitchCharacter工具实现人物切换、人物切换动画、相机目标点变更等逻辑，提供人物切换，人物连携的API。
 
 #### 参考资料
 
