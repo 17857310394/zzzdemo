@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using GGG.Tool.Singleton;
-using UnityEngine.InputSystem.LowLevel;
+using HuHu;
 using UnityEngine.InputSystem;
 
 public class CharacterInputSystem : Singleton<CharacterInputSystem>

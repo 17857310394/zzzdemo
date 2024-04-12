@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 
 
 public class VFXManager : Singleton<VFXManager>

@@ -2,7 +2,7 @@ using ZZZ;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 using Cinemachine;
 
 public class CameraHitFeel : Singleton<CameraHitFeel>

@@ -1,10 +1,9 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 
-public class CharacterManager : Singleton<CharacterManager>
+public class CharacterManager : Singleton<CharacterManager> 
 {
     //找到所有的玩家-GameObject.Tag
 

@@ -1,5 +1,5 @@
 using Cinemachine;
-using GGG.Tool.Singleton;
+using HuHu;
 using System.Collections.Generic;
 using ZZZ;
 using UnityEngine;

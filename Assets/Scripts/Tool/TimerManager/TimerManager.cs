@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 
 public class TimerManager : Singleton<TimerManager>
 {

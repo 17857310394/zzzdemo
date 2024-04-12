@@ -1,8 +1,7 @@
 
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 using System.Collections.Generic;
-using ZZZ;
 
 public class GameBlackboard: Singleton<GameBlackboard>
 {

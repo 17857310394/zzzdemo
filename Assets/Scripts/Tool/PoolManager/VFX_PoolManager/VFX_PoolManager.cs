@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 using ZZZ;
 
 public class VFX_PoolManager : Singleton<VFX_PoolManager>

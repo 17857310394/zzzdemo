@@ -1,7 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using GGG.Tool.Singleton;
+using HuHu;
 
 public class SFX_PoolManager : Singleton<SFX_PoolManager>
 {

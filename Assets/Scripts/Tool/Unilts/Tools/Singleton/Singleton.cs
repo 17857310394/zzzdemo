@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GGG.Tool.Singleton
+namespace HuHu
 {
     public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {
@@ -15,9 +15,9 @@ namespace GGG.Tool.Singleton
                 {
                     lock (_lock)
                     {
-                        _instance = FindObjectOfType<T>() as T; //先去场景中找有没有这个类
+                        _instance = FindObjectOfType<T>() as T; 
                     
-                        if (_instance == null)//如果没有，那么我们自己创建一个Gameobject然后给他加一个T这个类型的脚本，并赋值给instance;
+                        if (_instance == null)
                         {
                             GameObject go = new GameObject(typeof(T).Name);
                             _instance = go.AddComponent<T>();
@@ -44,10 +44,6 @@ namespace GGG.Tool.Singleton
         }
 
 
-        private void OnApplicationQuit()//程序退出时，将instance清空
-        {
-            _instance = null;
-        }
     }
     
 }
