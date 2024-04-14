@@ -4,7 +4,7 @@
 仅供开发者学习使用，请勿随意外传，禁止商业用途，包含相关官方美术素材，侵权联系作者删除。
 
 #### 使用说明
-下载ZIP（文件大约200MB），解压文件若出现损坏，请关闭第三方下载工具或者添加，使用浏览器下载。解压之后直接用UnityHub打开根文件夹，打开项目后进入NO1场景
+下载ZIP（文件大约200MB），解压文件若出现损坏，请关闭第三方下载工具，使用浏览器下载。解压之后直接用UnityHub打开根文件夹，打开项目后进入NO1场景
 
 #### Demo架构
 第三人称控制采用CharacterController下的Move方法实现移动，使用OnAnimaionMove动画更新频率刷新的根运动实现的移动。
@@ -23,6 +23,7 @@ SFX_PoolManger工具类提供一个用SoundStyle枚举类型映射音效预制�
 VFXManager工具类控制全场特效的播放速度，提供控制场景特效播放速度的API。
 CameraHitFeel工具类控制角色慢动作、顿帧、震屏。提供改变ScaleTime的API、只改变特定角色动画播放速度和场景中所有特效播放速度的API。
 SwitchCharacter工具实现人物切换、人物切换动画、相机目标点变更等逻辑，提供人物切换，人物连携的API。
+GameBlackboard工具类实现每个角色之间的数据共享、和敌人的同步。提供GetGameData<T>(string)的API、GetEnemies（）的API。
 
 #### 参考资料
 
