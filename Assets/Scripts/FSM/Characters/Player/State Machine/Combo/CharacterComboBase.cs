@@ -251,7 +251,7 @@ namespace ZZZ
                 UpdateATKIndex();
                // Debug.Log("此时ATK值为："+ reusableData.ATKIndex) ;
                  CameraHitFeel.MainInstance.CameraShake(reusableData.currentCombo.GetComboShakeForce(reusableData.currentIndex.Value,reusableData.ATKIndex));
-              
+                Debug.Log(reusableData.currentCombo);
                 if (!AttackDetection(reusableData.currentCombo)) { return; }
 
                   GameEventsManager.MainInstance.CallEvent("触发伤害",

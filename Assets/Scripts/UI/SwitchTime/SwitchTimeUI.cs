@@ -65,7 +65,9 @@ public class SwitchTimeUI : MonoBehaviour, IUI
     /// </summary>
     public void UnActive()
     {
+        if (this.gameObject.activeSelf == false) { return; }
         Debug.Log("“∆≥˝UIœ‘ æ");
+     
         //“∆∂ØUI
         if (coroutine != null)
         {

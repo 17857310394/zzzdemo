@@ -46,7 +46,7 @@ public class StateBarUI : MonoBehaviour,IUI
     }
     public void ShowAt(Vector3 screenPos,Vector3 worldPos)
     {
-        //屏幕坐标转给UI坐标
+        //UI坐标转屏幕坐标
         this.transform.position = screenPos;
 
         float distance = Vector3.Distance(worldPos, cam.position);
