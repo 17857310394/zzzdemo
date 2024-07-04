@@ -18,10 +18,6 @@ public class BloodPos : MonoBehaviour
 
     private void syncBloodUI()
     {
-        Vector3 worldPos =this. transform.position;
-        //世界坐标转屏幕坐标
-        Vector3 ScreenPos = cam.WorldToScreenPoint(worldPos);
-
-        UIManager.MainInstance.stateBarUI.ShowAt(ScreenPos,worldPos);
+        UIManager.MainInstance.stateBarUI.ShowAt(this.transform.position);
     }
 }

@@ -5,7 +5,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using static SFX_PoolManager;
 
-public class CreateSoundPoolItem : MonoBehaviour
+public class CreateSoundPoolItem : Editor
 {
     [MenuItem("HuHuTools/Create SoundDataPool")]
     public static void CreateSoundDataPool()

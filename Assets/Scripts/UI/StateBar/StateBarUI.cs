@@ -44,13 +44,19 @@ public class StateBarUI : MonoBehaviour,IUI
         GreenBloodBar.fillAmount= percentage;
        
     }
-    public void ShowAt(Vector3 screenPos,Vector3 worldPos)
+    public void ShowAt(Vector3 worldPos)
     {
-        //UI×ø±ê×ªÆÁÄ»×ø±ê
-        this.transform.position = screenPos;
 
-        float distance = Vector3.Distance(worldPos, cam.position);
-        float scale = baseScale * baseDistance / distance;
-        transform.localScale =new Vector3 (scale, scale, scale);
+        Vector3 viewPos = Camera.main.WorldToViewportPoint(worldPos);
+        if (viewPos.x > -0.2 && viewPos.x < 1.2 && viewPos.y > -0.2 && viewPos.y < 1.2 && viewPos.z > -0.2)
+        {
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+            this.transform.position = screenPos;
+
+            float distance = Vector3.Distance(worldPos, cam.position);
+            float scale = baseScale * baseDistance / distance;
+            transform.localScale = new Vector3(scale, scale, scale);
+        }
+        
     }
 }
