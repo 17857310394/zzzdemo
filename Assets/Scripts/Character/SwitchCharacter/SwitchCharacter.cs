@@ -78,7 +78,7 @@ namespace ZZZ
             for (int i = 0; i < switchCharacterInfos.Count; i++)
             {
                 switchCharacterInfos[i].animator = switchCharacterInfos[i].character.transform.GetComponent<Animator>();
-                waitingCharacterList.Add(switchCharacterInfos[i].characterName);
+                if(i>0) waitingCharacterList.Add(switchCharacterInfos[i].characterName);
             }
             //初始化默认角色
             newCharacterName.Value = CharacterNameList.AnBi;
