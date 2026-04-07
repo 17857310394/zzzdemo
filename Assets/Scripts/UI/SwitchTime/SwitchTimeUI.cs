@@ -44,16 +44,16 @@ public class SwitchTimeUI : MonoBehaviour, IUI
 
     public void ActiveImage(CharacterNameList LCharacterName, CharacterNameList RCharacterName, float time)
     {
-        //ÏÈ¼¤»î
+        //å…ˆæ¿€æ´»
         gameObject.SetActive(true);
-        //ÒÆ¶¯UI
+        //ç§»åŠ¨UI
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
         }
         coroutine = StartCoroutine(MoveUI(targetPos, initPos, 10, false));
         
-        //¿ªÊ¼¼ÆÊ±
+        //å¼€å§‹è®¡æ—¶
         StartCountDown(time);
 
         R_Image.sprite = MatchImage(RCharacterName);
@@ -61,14 +61,14 @@ public class SwitchTimeUI : MonoBehaviour, IUI
         L_Image.sprite = MatchImage(LCharacterName);
     }
     /// <summary>
-    /// ÒÆ³ıÏÔÊ¾
+    /// ç§»é™¤æ˜¾ç¤º
     /// </summary>
     public void UnActive()
     {
         if (this.gameObject.activeSelf == false) { return; }
-        Debug.Log("ÒÆ³ıUIÏÔÊ¾");
+        Debug.Log("ç§»é™¤UIæ˜¾ç¤º");
      
-        //ÒÆ¶¯UI
+        //ç§»åŠ¨UI
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
@@ -78,7 +78,7 @@ public class SwitchTimeUI : MonoBehaviour, IUI
     IEnumerator MoveUI(Vector3 initPos ,Vector3 targetPos,float Speed,bool canUnActive)
     {
         uIPos.anchoredPosition = initPos;
-        Debug.Log("½øÈëĞ­³Ì" + Vector3.Distance(targetPos, uIPos.anchoredPosition));
+        Debug.Log("è¿›å…¥åç¨‹" + Vector3.Distance(targetPos, uIPos.anchoredPosition));
         while (Vector3.Distance(uIPos.anchoredPosition, targetPos) >1f)
         {
             uIPos.anchoredPosition = Vector3.Lerp(uIPos.anchoredPosition, targetPos, Time.unscaledDeltaTime * Speed);
@@ -92,7 +92,7 @@ public class SwitchTimeUI : MonoBehaviour, IUI
         }
     }
     /// <summary>
-    /// ÇĞ»»Í·Ïñ
+    /// åˆ‡æ¢å¤´åƒ
     /// </summary>
     /// <param name="characterName"></param>
     /// <returns></returns>
@@ -112,7 +112,7 @@ public class SwitchTimeUI : MonoBehaviour, IUI
         return null;
     }
     /// <summary>
-    /// ³õÊ¼»¯µ¹¼ÆÊ±
+    /// åˆå§‹åŒ–å€’è®¡æ—¶
     /// </summary>
     /// <param name="time"></param>
     private void StartCountDown(float time)
@@ -121,15 +121,15 @@ public class SwitchTimeUI : MonoBehaviour, IUI
         stopTime = false;
     }
     /// <summary>
-    /// ¼ÆËã¼ÆÊ±Æ÷
+    /// è®¡ç®—è®¡æ—¶å™¨
     /// </summary>
     private void UpdateCountDown()
     {
         if (stopTime) { return; }
-        //¼ÆËãÃë
+        //è®¡ç®—ç§’
         timeLeft -= Time.unscaledDeltaTime;
         second = Mathf.FloorToInt(timeLeft);
-        //¼ÆËãºÁÃë
+        //è®¡ç®—æ¯«ç§’
         millisecond = (timeLeft - second) * 100;
         millisecondInt = Mathf.FloorToInt(millisecond);
 

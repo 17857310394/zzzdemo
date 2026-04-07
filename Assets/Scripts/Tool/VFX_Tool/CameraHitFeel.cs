@@ -7,7 +7,7 @@ using Cinemachine;
 
 public class CameraHitFeel : Singleton<CameraHitFeel>
 {
-    //*****ÒÀÀµCharacterManagerºÍÌØĞ§¹ÜÀíÆ÷VFXManager*****//
+    //*****é…åˆCharacterManagerå®ç°æ‰“å‡»æ„Ÿç‰¹æ•ˆå’ŒVFXManager*****//
 
     [SerializeField] private Animator currentCharacterAnimator;
     [SerializeField] private Animator currentEnemyAnimator;
@@ -54,7 +54,7 @@ public class CameraHitFeel : Singleton<CameraHitFeel>
 
     public void PF(float time)
     {
-        if (time == 0) { Debug.Log("¶ÙÖ¡Ê±¼äÎª0ÍË³ö");return; }
+        if (time == 0) { Debug.Log("é¡¿å¸§æ—¶é—´ä¸º0é€€å‡º");return; }
         currentEnemyAnimator= GetEnemyAnimator();
         currentCharacterAnimator=GetCurrentCharacterAnimator();
 
@@ -77,7 +77,7 @@ public class CameraHitFeel : Singleton<CameraHitFeel>
         PauseFrameCoroutine = StartCoroutine(PauseFrameOnAnimation(time));
     }
     /// <summary>
-    /// ¶¯»­ÌØĞ§µÄÂıËÙ
+    /// æ…¢åŠ¨ä½œæ•ˆæœæ§åˆ¶
     /// </summary>
     /// <param name="time"></param>
     /// <param name="speedMult"></param>
@@ -129,7 +129,7 @@ public class CameraHitFeel : Singleton<CameraHitFeel>
     }
     IEnumerator PauseFrameOnAnimation(float time)
     {
-        Debug.LogWarning("½øÈë¶ÙÖ¡Ğ­³Ì"+ time);
+        Debug.LogWarning("å¼€å§‹é¡¿å¸§åç¨‹:"+ time);
         currentCharacterAnimator.speed = 0f;
         currentEnemyAnimator.speed = 0f;
         VFXManager.MainInstance.PauseVFX();
@@ -162,7 +162,7 @@ public class CameraHitFeel : Singleton<CameraHitFeel>
 
     }
     
-    #region ÕğÆÁ
+    #region éœ‡å±
     public void CameraShake(float shakeForce)
     {
         if (shakeForce == 0) { return; }
